@@ -16,6 +16,7 @@
     <name>OPS4J Pax Tipi Master POM</name>
 
     <properties>
+        <tipi.subdir>${project.artifactId}</tipi.subdir>
         <tipi.legal.version>1.0</tipi.legal.version>
         <tipi.osgi.export>${tipi.osgi.export.pkg}*</tipi.osgi.export>
         <tipi.osgi.export.pkg />
