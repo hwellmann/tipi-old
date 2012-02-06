@@ -133,12 +133,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.2</version>
                 <configuration>
-                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release, repos.sonatype.staging</releaseProfiles>
                     <preparationGoals>clean install</preparationGoals>
                     <goals>deploy</goals>
-                    <arguments>-Prelease</arguments>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <remoteTagging>false</remoteTagging>
                     <!-- avoid remote tagging as it requires an <scm /> section for 
                         every bundle -->
