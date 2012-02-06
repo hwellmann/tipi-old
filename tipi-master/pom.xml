@@ -12,7 +12,7 @@
     <groupId>org.ops4j.pax.tipi</groupId>
     <artifactId>tipi-master</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>OPS4J Pax Tipi Master POM</name>
 
     <properties>
@@ -133,7 +133,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.2.2</version>
+                <version>2.2.1</version>
                 <configuration>
                     <releaseProfiles>release, repos.sonatype.staging</releaseProfiles>
                     <preparationGoals>clean install</preparationGoals>
