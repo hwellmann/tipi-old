@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.ops4j.pax.tipi</groupId>
+        <artifactId>tipi-master</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../tipi-master/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>org.ops4j.pax.tipi.junit.dep</artifactId>
+    <version>4.10_1-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+    <name>OPS4J Pax Tipi :: ${pkgArtifactId}</name>
+    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion}</description>
+
+    <properties>
+        <tipi.subdir>${pkgArtifactId}-${pkgVersion}</tipi.subdir>
+        <pkgGroupId>junit</pkgGroupId>
+        <pkgArtifactId>junit-dep</pkgArtifactId>
+        <pkgVersion>4.10</pkgVersion>
+        <tipi.osgi.import.pkg>org.hamcrest.*;version="[1.1,2.0)"</tipi.osgi.import.pkg>
+        <tipi.osgi.export.pkg>
+            org.junit*,
+            junit*
+        </tipi.osgi.export.pkg>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${pkgGroupId}</groupId>
+            <artifactId>${pkgArtifactId}</artifactId>
+            <version>${pkgVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
