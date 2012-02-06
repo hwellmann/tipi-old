@@ -12,7 +12,7 @@
 
     <groupId>org.ops4j.pax.tipi</groupId>
     <artifactId>org.ops4j.pax.tipi.hamcrest.core</artifactId>
-    <version>1.2_1</version>
+    <version>1.2_2-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>OPS4J Pax Tipi :: ${pkgArtifactId}</name>
     <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion}.</description>
