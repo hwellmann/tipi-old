@@ -14,14 +14,14 @@
     <artifactId>org.ops4j.pax.tipi.junit</artifactId>
     <version>4.11_1-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>OPS4J Pax Tipi :: ${pkgArtifactId}</name>
-    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion}</description>
+    <name>OPS4J Pax Tipi :: ${tipi.orig.artifactId}</name>
+    <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}</description>
 
     <properties>
-        <tipi.subdir>${pkgArtifactId}-${pkgVersion}</tipi.subdir>
-        <pkgGroupId>junit</pkgGroupId>
-        <pkgArtifactId>junit</pkgArtifactId>
-        <pkgVersion>4.11</pkgVersion>
+        <tipi.subdir>${tipi.orig.artifactId}-${tipi.orig.version}</tipi.subdir>
+        <tipi.orig.groupId>junit</tipi.orig.groupId>
+        <tipi.orig.artifactId>junit</tipi.orig.artifactId>
+        <tipi.orig.version>4.11</tipi.orig.version>
         <tipi.osgi.export.pkg>
             org.junit*,
             junit*
@@ -30,9 +30,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>${pkgGroupId}</groupId>
-            <artifactId>${pkgArtifactId}</artifactId>
-            <version>${pkgVersion}</version>
+            <groupId>${tipi.orig.groupId}</groupId>
+            <artifactId>${tipi.orig.artifactId}</artifactId>
+            <version>${tipi.orig.version}</version>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>

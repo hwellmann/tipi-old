@@ -62,9 +62,9 @@
                             <configuration>
                                 <artifactItems>
                                     <artifactItem>
-                                        <groupId>${pkgGroupId}</groupId>
-                                        <artifactId>${pkgArtifactId}</artifactId>
-                                        <version>${pkgVersion}</version>
+                                        <groupId>${tipi.orig.groupId}</groupId>
+                                        <artifactId>${tipi.orig.artifactId}</artifactId>
+                                        <version>${tipi.orig.version}</version>
                                         <classifier>sources</classifier>
                                     </artifactItem>
                                 </artifactItems>

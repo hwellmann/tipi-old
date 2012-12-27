@@ -14,14 +14,14 @@
     <artifactId>org.ops4j.pax.tipi.hamcrest.core</artifactId>
     <version>1.3_1-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>OPS4J Pax Tipi :: ${pkgArtifactId}</name>
-    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion}.</description>
+    <name>OPS4J Pax Tipi :: ${tipi.orig.artifactId}</name>
+    <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}.</description>
 
     <properties>
-        <tipi.subdir>${pkgArtifactId}-${pkgVersion}</tipi.subdir>
-        <pkgGroupId>org.hamcrest</pkgGroupId>
-        <pkgArtifactId>hamcrest-core</pkgArtifactId>
-        <pkgVersion>1.3</pkgVersion>
+        <tipi.subdir>${tipi.orig.artifactId}-${tipi.orig.version}</tipi.subdir>
+        <tipi.orig.groupId>org.hamcrest</tipi.orig.groupId>
+        <tipi.orig.artifactId>hamcrest-core</tipi.orig.artifactId>
+        <tipi.orig.version>1.3</tipi.orig.version>
         <tipi.osgi.export>
             org.hamcrest.*;version:=1.3
         </tipi.osgi.export>
@@ -29,9 +29,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>${pkgGroupId}</groupId>
-            <artifactId>${pkgArtifactId}</artifactId>
-            <version>${pkgVersion}</version>
+            <groupId>${tipi.orig.groupId}</groupId>
+            <artifactId>${tipi.orig.artifactId}</artifactId>
+            <version>${tipi.orig.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>

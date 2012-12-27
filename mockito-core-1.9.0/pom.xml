@@ -14,23 +14,23 @@
     <artifactId>org.ops4j.pax.tipi.mockito.core</artifactId>
     <version>1.9.0_1-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>OPS4J Pax Tipi :: ${pkgArtifactId}</name>
-    <description>This OSGi bundle wraps ${pkgArtifactId} ${pkgVersion}.</description>
+    <name>OPS4J Pax Tipi :: ${tipi.orig.artifactId}</name>
+    <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}.</description>
     
     <properties>
-        <pkgGroupId>org.mockito</pkgGroupId>
-        <pkgArtifactId>mockito-core</pkgArtifactId>
-        <pkgVersion>1.9.0</pkgVersion>
+        <tipi.orig.groupId>org.mockito</tipi.orig.groupId>
+        <tipi.orig.artifactId>mockito-core</tipi.orig.artifactId>
+        <tipi.orig.version>1.9.0</tipi.orig.version>
         <tipi.osgi.export.pkg>
-            org.mockito.*;version=${pkgVersion};-split-package:=merge-first
+            org.mockito.*;version=${tipi.orig.version};-split-package:=merge-first
         </tipi.osgi.export.pkg>
     </properties>
     
     <dependencies>
         <dependency>
-            <groupId>${pkgGroupId}</groupId>
-            <artifactId>${pkgArtifactId}</artifactId>
-            <version>${pkgVersion}</version>
+            <groupId>${tipi.orig.groupId}</groupId>
+            <artifactId>${tipi.orig.artifactId}</artifactId>
+            <version>${tipi.orig.version}</version>
 	    <optional>true</optional>
         </dependency>
     </dependencies>
