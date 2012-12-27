@@ -16,6 +16,12 @@
     <name>OPS4J Pax Tipi - ${tipi.orig.artifactId}</name>
     <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}.</description>
 
+    <scm>
+        <connection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</connection>
+        <developerConnection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</developerConnection>
+        <url>git@github.com:hwellmann/org.ops4j.pax.tipi.git</url>
+    </scm>
+
     <properties>
         <tipi.subdir>${tipi.orig.artifactId}-${tipi.orig.version}</tipi.subdir>
         <tipi.orig.groupId>org.hamcrest</tipi.orig.groupId>
