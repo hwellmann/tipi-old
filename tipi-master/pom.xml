@@ -55,6 +55,25 @@
                     <artifactId>maven-dependency-plugin</artifactId>
                     <executions>
                         <execution>
+                            <id>unpack-resources</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>unpack</goal>
+                            </goals>
+                            <configuration>
+                                <artifactItems>
+                                    <artifactItem>
+                                        <groupId>${tipi.orig.groupId}</groupId>
+                                        <artifactId>${tipi.orig.artifactId}</artifactId>
+                                        <version>${tipi.orig.version}</version>
+                                    </artifactItem>
+                                </artifactItems>
+                                <excludes>**/*.class</excludes>
+                                <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+                                <outputDirectory>target/unpacked-resources</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
                             <id>unpack-sources</id>
                             <phase>post-integration-test</phase>
                             <goals>
@@ -120,6 +139,7 @@
                             <Embed-Dependency>${tipi.osgi.embed.dependency}</Embed-Dependency>
                             <Bundle-NativeCode>${tipi.osgi.native}</Bundle-NativeCode>
                             <Bundle-Activator>${tipi.osgi.activator}</Bundle-Activator>
+                            <Include-Resource>target/unpacked-resources</Include-Resource>
                             <_failok>${tipi.osgi.failok}</_failok>
                             <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
                             <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency
