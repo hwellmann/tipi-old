@@ -16,13 +16,10 @@
     <name>OPS4J Pax Tipi Master POM</name>
 
     <properties>
-        <tipi.subdir>${project.artifactId}</tipi.subdir>
-        <tipi.legal.version>1.0</tipi.legal.version>
-        <tipi.osgi.export>${tipi.osgi.export.pkg}*</tipi.osgi.export>
-        <tipi.osgi.export.pkg />
-        <tipi.osgi.import.pkg>*</tipi.osgi.import.pkg>
-        <tipi.osgi.private.pkg />
-        <tipi.osgi.dynamicimport.pkg />
+        <tipi.osgi.export />
+        <tipi.osgi.import>*</tipi.osgi.import>
+        <tipi.osgi.private />
+        <tipi.osgi.dynamicimport />
         <tipi.osgi.failok>false</tipi.osgi.failok>
         <tipi.osgi.embed.dependency />
     </properties>
@@ -35,7 +32,7 @@
         <connection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</connection>
         <developerConnection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</developerConnection>
         <url>git@github.com:hwellmann/org.ops4j.pax.tipi.git</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <build>
@@ -133,9 +130,9 @@
                             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                             <Bundle-Description>${project.description}</Bundle-Description>
                             <Export-Package>${tipi.osgi.export}</Export-Package>
-                            <Import-Package>${tipi.osgi.import.pkg}</Import-Package>
-                            <Private-Package>${tipi.osgi.private.pkg}</Private-Package>
-                            <DynamicImport-Package>${tipi.osgi.dynamicimport.pkg}</DynamicImport-Package>
+                            <Import-Package>${tipi.osgi.import}</Import-Package>
+                            <Private-Package>${tipi.osgi.private}</Private-Package>
+                            <DynamicImport-Package>${tipi.osgi.dynamicimport}</DynamicImport-Package>
                             <Embed-Dependency>${tipi.osgi.embed.dependency}</Embed-Dependency>
                             <Bundle-NativeCode>${tipi.osgi.native}</Bundle-NativeCode>
                             <Bundle-Activator>${tipi.osgi.activator}</Bundle-Activator>
@@ -145,25 +142,11 @@
                             <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency
                             </_removeheaders>
                         </instructions>
-                        <!--unpackBundle>true</unpackBundle-->
                     </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
 
     </build>
 
