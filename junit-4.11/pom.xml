@@ -12,9 +12,9 @@
     </parent>
 
     <artifactId>org.ops4j.pax.tipi.junit</artifactId>
-    <version>4.11_1-SNAPSHOT</version>
+    <version>4.11.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>OPS4J Pax Tipi :: ${tipi.orig.artifactId}</name>
+    <name>OPS4J Pax Tipi - ${tipi.orig.artifactId}</name>
     <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}</description>
 
     <properties>
@@ -22,10 +22,9 @@
         <tipi.orig.groupId>junit</tipi.orig.groupId>
         <tipi.orig.artifactId>junit</tipi.orig.artifactId>
         <tipi.orig.version>4.11</tipi.orig.version>
-        <tipi.osgi.export.pkg>
-            org.junit*,
-            junit*
-        </tipi.osgi.export.pkg>
+        <tipi.osgi.export>
+            org.junit*;version=${tipi.orig.version},junit*;version=${tipi.orig.version}
+        </tipi.osgi.export>
     </properties>
 
     <dependencies>
@@ -39,7 +38,7 @@
         <dependency>
             <groupId>org.ops4j.pax.tipi</groupId>
             <artifactId>org.ops4j.pax.tipi.hamcrest.core</artifactId>
-            <version>1.3_1-SNAPSHOT</version>
+            <version>1.3.0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -49,6 +48,10 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
