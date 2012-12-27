@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,7 +11,7 @@
     </parent>
 
     <artifactId>org.ops4j.pax.tipi.junit</artifactId>
-    <version>4.11.0.1-SNAPSHOT</version>
+    <version>4.11.0.1</version>
     <packaging>bundle</packaging>
     <name>OPS4J Pax Tipi - ${tipi.orig.artifactId}</name>
     <description>This OSGi bundle wraps ${tipi.orig.artifactId} ${tipi.orig.version}</description>
@@ -21,7 +20,8 @@
         <connection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</connection>
         <developerConnection>scm:git:git@github.com:hwellmann/org.ops4j.pax.tipi.git</developerConnection>
         <url>git@github.com:hwellmann/org.ops4j.pax.tipi.git</url>
-    </scm>
+      <tag>org.ops4j.pax.tipi.junit-4.11.0.1</tag>
+  </scm>
   
     <properties>
         <tipi.subdir>${tipi.orig.artifactId}-${tipi.orig.version}</tipi.subdir>
